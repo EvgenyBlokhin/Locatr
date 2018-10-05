@@ -122,21 +122,7 @@ public class LocatrFragment extends SupportMapFragment {
         MenuItem searchItem = menu.findItem(R.id.action_locate);
         searchItem.setEnabled(mClient.isConnected());
     }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.action_locate:
-//                if (hasLocationPermission()) {
-//                    findImage();
-//                } else {
-//                    requestPermissions(LOCATION_PERMISSIONS, REQUEST_LOCATION_PERMISSIONS);
-//                }
-//                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
+    
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
