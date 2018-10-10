@@ -44,7 +44,6 @@ import java.util.List;
 public class LocatrFragment extends SupportMapFragment {
     private GoogleApiClient mClient;
     private GoogleMap mMap;
-//    private ProgressBar mProgressBar;
     private static final String TAG = "LocatrFragment";
     private static final String[] LOCATION_PERMISSIONS = new String[]{
             Manifest.permission.ACCESS_FINE_LOCATION,
@@ -88,17 +87,6 @@ public class LocatrFragment extends SupportMapFragment {
         });
     }
 
-//    @Nullable
-//    @Override
-//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        View v = inflater.inflate(R.layout.fragment_locatr, container, false);
-//
-//        mImageView = v.findViewById(R.id.image);
-//        mProgressBar = v.findViewById(R.id.indeterminateBar);
-//
-//        return v;
-//    }
-
     @Override
     public void onStart() {
         super.onStart();
@@ -122,7 +110,7 @@ public class LocatrFragment extends SupportMapFragment {
         MenuItem searchItem = menu.findItem(R.id.action_locate);
         searchItem.setEnabled(mClient.isConnected());
     }
-    
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -217,7 +205,6 @@ public class LocatrFragment extends SupportMapFragment {
 
         @Override
         protected void onPreExecute() {
-//            mProgressBar.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -248,8 +235,6 @@ public class LocatrFragment extends SupportMapFragment {
             mCurrentLocation = mLocation;
 
             updateUI();
-//            mImageView.setImageBitmap(mBitmap);
-//            mProgressBar.setVisibility(View.INVISIBLE);
         }
     }
     public static class PermissionRationaleDialog extends DialogFragment {
