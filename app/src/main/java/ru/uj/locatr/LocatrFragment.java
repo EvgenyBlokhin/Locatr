@@ -204,10 +204,6 @@ public class LocatrFragment extends SupportMapFragment {
         private Location mLocation;
 
         @Override
-        protected void onPreExecute() {
-        }
-
-        @Override
         protected Void doInBackground(Location... params) {
             mLocation = params[0];
             FlickrFetchr flickr = new FlickrFetchr();
